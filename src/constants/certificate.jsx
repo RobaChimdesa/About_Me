@@ -5,6 +5,7 @@ import { about } from "../assets"
 import { machine } from "../assets"
 import { figma } from "../assets"
 import { rect } from "../assets"
+import {datascience } from "../assets"
 
 export const Certificates = [
     {
@@ -41,7 +42,14 @@ export const Certificates = [
     {
         id:'60',
         img:about
+    },
+
+    {
+        id:'70',
+        img:datascience,
+        name:'data_science'
     }
+    
 ]
  
 
