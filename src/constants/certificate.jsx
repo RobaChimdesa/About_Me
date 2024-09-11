@@ -1,7 +1,7 @@
 import { back1 } from "../assets"
 import { roba } from "../assets"
 import { about } from "../assets"
-
+import { about } from "../assets"
 import { machine } from "../assets"
 import { figma } from "../assets"
 import { rect } from "../assets"
@@ -48,8 +48,12 @@ export const Certificates = [
         id:'70',
         img:datascience,
         name:'data_science'
+    },
+     {
+        id:'80',
+        img:DBMS,
+        name:"DBMS"
     }
-    
 ]
  
 
