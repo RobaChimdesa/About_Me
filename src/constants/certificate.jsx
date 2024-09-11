@@ -1,7 +1,6 @@
 import { back1 } from "../assets"
 import { roba } from "../assets"
 import { about } from "../assets"
-import { about } from "../assets"
 import { machine } from "../assets"
 import { figma } from "../assets"
 import { rect } from "../assets"
