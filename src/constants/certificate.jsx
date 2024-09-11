@@ -41,19 +41,16 @@ export const Certificates = [
 
     {
         id:'60',
-        img:about
+        img:datascience,
+        name:'data_science'
     },
 
     {
         id:'70',
-        img:datascience,
-        name:'data_science'
-    },
-     {
-        id:'80',
         img:DBMS,
         name:"DBMS"
     }
+     
 ]
  
 
