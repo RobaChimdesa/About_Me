@@ -6,7 +6,7 @@ import { machine } from "../assets"
 import { figma } from "../assets"
 import { rect } from "../assets"
 import {datascience } from "../assets"
-
+import { DBMS } from "../assets"
 export const Certificates = [
     {
         id:'10',
