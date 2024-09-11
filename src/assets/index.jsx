@@ -1,6 +1,7 @@
 import roba from "./images/roba.jpg";
 import about from "./images/photo.jpg";
 import datascience from "./images/5M.jpg";
+import DBMS from "./images/DBMS.jpg";
 
 import back1 from "./images/bg6.jpg";
 import figma from './images/figma.jpg'
@@ -45,6 +46,7 @@ export {
     calculator,
     home,
     autho,
-    datascience 
+    datascience,
+    DBMS
    
 }
