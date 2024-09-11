@@ -27,26 +27,14 @@ export const Certificates = [
         name:'Figma'
     },
 
-    
-
     {
         id:'40',
-        img:about
-    },
-    
-    {
-        id:'50',
-        img:roba
-    },
-
-    {
-        id:'60',
         img:datascience,
         name:'data_science'
     },
 
     {
-        id:'70',
+        id:'50',
         img:DBMS,
         name:"DBMS"
     }
