@@ -2,7 +2,8 @@ import roba from "./images/roba.jpg";
 import about from "./images/photo.jpg";
 import datascience from "./images/5M.jpg";
 import DBMS from "./images/DBMS.jpg";
-
+import Django from "./images/Django.jpg";
+import linux from "./images/linux.jpg";
 import back1 from "./images/bg6.jpg";
 import figma from './images/figma.jpg'
 import machine from './images/ma.png'
@@ -47,6 +48,8 @@ export {
     home,
     autho,
     datascience,
-    DBMS
+    DBMS,
+    Django,
+    linux
    
 }
