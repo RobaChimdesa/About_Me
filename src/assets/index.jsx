@@ -3,6 +3,7 @@ import about from "./images/photo.jpg";
 import datascience from "./images/5M.jpg";
 import DBMS from "./images/DBMS.jpg";
 import Django from "./images/django.jpg";
+import ORM from "./images/django ORM.jpg";
 import linux from "./images/linux.jpg";
 import back1 from "./images/bg6.jpg";
 import figma from './images/figma.jpg'
@@ -50,6 +51,7 @@ export {
     datascience,
     DBMS,
     Django,
-    linux
+    linux,
+    ORM
    
 }
