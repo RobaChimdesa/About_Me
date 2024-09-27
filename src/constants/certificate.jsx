@@ -54,7 +54,7 @@ export const Certificates = [
     {
         id:'80',
         img:ORM,
-        name:"django 'ORM'
+        name:"django ORM"
     }        
      
 ]
