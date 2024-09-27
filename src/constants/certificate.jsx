@@ -8,6 +8,7 @@ import {datascience } from "../assets"
 import { DBMS } from "../assets"
 import { Django } from "../assets"
 import { linux } from "../assets"
+import { ORM } from "../assets"
 
 export const Certificates = [
     {
@@ -49,7 +50,12 @@ export const Certificates = [
         id:'70',
         img:linux,
         name:"Linux Command"
-    }
+    },
+    {
+        id:'80',
+        img:ORM,
+        name:"django 'ORM'
+    }        
      
 ]
  
