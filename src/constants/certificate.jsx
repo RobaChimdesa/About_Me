@@ -9,6 +9,7 @@ import { DBMS } from "../assets"
 import { Django } from "../assets"
 import { linux } from "../assets"
 import { ORM } from "../assets"
+import { e_SHE } from "../assets"
 
 export const Certificates = [
     {
@@ -55,7 +56,12 @@ export const Certificates = [
         id:'80',
         img:ORM,
         name:"django ORM"
-    }        
+    },
+    {
+        id:'90',
+        img:e_SHE,
+        name:"Set Goals to Manage Your Time"
+    }
      
 ]
  
