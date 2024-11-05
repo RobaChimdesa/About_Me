@@ -24,6 +24,7 @@ import php from './images/php.png'
 import calculator from './images/calculator.png'
 import home from './images/house.jpeg'
 import autho from './images/authontication.png'
+import e_SHE from './images/e-SHE.jpg'
 export {
     roba,
     about,
@@ -52,6 +53,7 @@ export {
     DBMS,
     Django,
     linux,
-    ORM
+    ORM,
+    e_SHE
    
 }
