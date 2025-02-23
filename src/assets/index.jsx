@@ -25,6 +25,8 @@ import calculator from './images/calculator.png'
 import home from './images/house.jpeg'
 import autho from './images/authontication.png'
 import e_SHE from './images/e-SHE.jpg'
+import unsupervised from './images/unsupervised.jpg'
+
 export {
     roba,
     about,
@@ -54,6 +56,7 @@ export {
     Django,
     linux,
     ORM,
-    e_SHE
+    e_SHE,
+    unsupervised 
    
 }
