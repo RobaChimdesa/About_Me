@@ -1,78 +1,63 @@
-import { useState } from 'react'
-import React from 'react'
-import All from './All'
-import Frontend from './Frontend'
-import Backend from './Backend'
-import Database from './database'
-import Framework from './framework'
-import Design from './design'
+
+import React, { useState } from "react";
+import All from "./All";
+import Frontend from "./Frontend";
+import Backend from "./Backend";
+import Database from "./database";
+import Framework from "./framework";
+import Design from "./design";
+
 const Skill = () => {
-  const [allData,setallData] = useState(true)
-  const [frontDat,setfrontData] = useState(false)
-  const [backData,setbackData] = useState(false)
-  const [databaseData,setdatabaseData] = useState(false)
-  const [frameworkData,setframeworkData] = useState(false)
-  const [designData,setdesignData] = useState(false)
-  
+  const [activeTab, setActiveTab] = useState("all");
 
-  
+  const tabs = [
+    { id: "all", label: "All", component: <All /> },
+    { id: "frontend", label: "Frontend", component: <Frontend /> },
+    { id: "backend", label: "Backend", component: <Backend /> },
+    { id: "database", label: "Database", component: <Database /> },
+    { id: "framework", label: "Framework", component: <Framework /> },
+    { id: "design", label: "Design", component: <Design /> },
+  ];
+
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+  };
+
   return (
-    <section id='skills' className='h-[800px] w-full md:py-1'>
-    <div className=' justify-center items-center mx-2  md:mx-56'>
-    <h1 className="text-white text-xl md:text-2xl  mt-11 mb-2 md:mb-5 md:font-bold ">
-         Skill
+    <section
+      id="skills"
+      className="w-full py-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 min-h-screen"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-800 mb-8 animate-fade-in-down">
+          Skills
         </h1>
-     <ul className='gap-0  md:w-full grid grid-cols-6 mb-4'>
-       <li className={`${allData ? 'text-sky-500 text-2xl ': ''} skill`}
-       
-       onClick={() => 
-        setallData(true) & setfrontData(false) & setbackData(false) & setframeworkData(false) & setdesignData(false) & setdatabaseData(false)
-        
-        }>All</li>
-       <li className={`${frontDat ? 'text-sky-500 text-2xl ': ''} skill`}
-        onClick={() => 
-       setallData(false) & setfrontData(true) & setbackData(false) & setframeworkData(false) & setdesignData(false) & setdatabaseData(false)
-  
-      }>Frontend</li>
-       <li className={`${backData ? 'text-sky-500 text-2xl ': ''} skill`}
-       onClick={()=>{
 
-      setallData(false) & setfrontData(false) & setbackData(true) & setframeworkData(false) & setdesignData(false) & setdatabaseData(false)
-     
-       }}
-       >Backend</li>
-       
-       <li className={`${frameworkData ? 'text-sky-500 text-2xl ': ''} skill`}
-       onClick={()=>{
-         setallData(false) & setfrontData(false) & setbackData(false) & setframeworkData(true) & setdesignData(false) & setdatabaseData(false)
-     
-       }
-      }>Framework</li>
-      <li className={`${databaseData ? 'text-sky-500 text-2xl ': ''} skill`} 
-      onClick={()=>{
-         setallData(false) & setfrontData(false) & setbackData(false) & setframeworkData(false) & setdesignData(false) & setdatabaseData(true)
-     
-       }}>Database</li>
-       <li className={`${designData ? 'text-sky-500 text-2xl ': ''} skill`}
-        onClick={() =>{
+        {/* Tabs */}
+        <ul className="grid grid-cols-3 sm:grid-cols-6 gap-2 sm:gap-4 md:gap-6 mb-10 justify-center items-center text-center">
+          {tabs.map((tab) => (
+            <li
+              key={tab.id}
+              onClick={() => handleTabClick(tab.id)}
+              className={`cursor-pointer px-2 py-2 sm:px-4 sm:py-3 text-sm sm:text-base md:text-lg font-semibold rounded-lg transition-all duration-300 ${
+                activeTab === tab.id
+                  ? "text-white bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md"
+                  : "text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700"
+              }`}
+            >
+              {tab.label}
+            </li>
+          ))}
+        </ul>
 
-       setallData(false) & setfrontData(false) & setbackData(false) & setframeworkData(false) & setdesignData(true) & setdatabaseData(false)
-     
-       }}>Design</li>
-
-
-      
-      </ul>   
-    </div>
-    {allData && <All/>}
-    {frontDat && <Frontend/>}
-    {backData && < Backend/>}
-    {databaseData && <Database/>}
-    {frameworkData && <Framework/>}
-    {designData && <Design/>}
-    
+        {/* Content */}
+        <div className="min-h-[400px] flex justify-center">
+          {tabs.find((tab) => tab.id === activeTab)?.component}
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skill
+export default Skill;
