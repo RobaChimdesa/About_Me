@@ -1,154 +1,78 @@
-// import { useState } from 'react'
-// import { Typewriter } from 'react-simple-typewriter'
-// import { about } from '../../assets'
 
-// const About = () => {
-//   const [showmore, setShowmore] = useState(false);
-//   const discriptin = (
-//     <p>
-//       My passion for learning and my drive to succeed make me a dedicated and
-//       motivated computer science and engineering student. With my strong
-//       foundation in web development and competitive programming, I’m
-//       well-positioned to excel in his future career as a computer science.
-//     </p>
-//   );
-//   const handleshow = () => {
-//     setShowmore(!showmore);
-//   };
-//   return (
-    
-//     <section id='about' className='w-full h-[800px] px-20 items-center  '>
-       
+import { useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
+import { about } from "../../assets";
 
-        
-//         <div className=' md:flex md:gap-36 '>
-//         <div className=" w-1/2 ">
-//           <div className=" md:mt-48 text-xl">
-//           <h1 className="text-xl md:text-2xl font-bold mt-4 md:mx-36 mb-10">
-//           About Me
-//         </h1>
-//             <div className='flex sm:w-[350px]'>
-//             <p className="text-left flex-grow ">
-//               My name is Roba Chimdesa. I'm a 4th-year computer science and engineering student at Adama Science and Technology University. I
-//               have a strong interest in web development and competitive
-//               programming, and am constantly seeking to improve my skills in
-//               these areas.
-//             </p>
-//             <p className="flex-grow text-left  hidden">
-//               {" "}
-//               I'm a self-motivated learner who is eager to explore new
-//               technologies and programming languages. I enjoy taking on new
-//               challenges and solving complex problems, which has led me to
-//               develop a keen interest in competitive programming.
-//             </p>{" "}
-//             </div>
-//             <button
-//               onClick={handleshow}
-//               className=" bg-sky-700 hover:bg-sky-500 sm:hidden px-10 md:p-2 md:px-6 rounded-3xl my-4 mx-28 "
-//             >
-//               {showmore ? "Hide" : "Show"} Details
-//             </button>
-//             {showmore && discriptin}
-//           </div>
-         
-//         </div>
-  
+const About = () => {
+  const [showMore, setShowMore] = useState(false);
 
- 
-//         <div className="mt-10 md:mt-48">
-         
-        
-//          <img src={about} alt="aboutimage" className="h-[250px] w-full md:w-4/5 md:h-4/6  rounded-2xl  transition ease-in-out delay-150  hover:-translate-x-1 hover:scale-y-110  duration-500" />
-//        </div>
+  const handleShow = () => {
+    setShowMore(!showMore);
+  };
 
-//         </div>
-      
-//         </section>
-  
-//   );
-     
-  
-   
-  
-// }
+  return (
+    <section
+      id="about"
+      className="w-full py-16 px-4 sm:px-6 md:px-12 lg:px-20 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-all duration-500"
+    >
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-800 mb-12 animate-fade-in-down">
+          About Me
+        </h1>
 
-// export default About
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+          {/* Text Content */}
+          <div className="w-full md:w-1/2 space-y-6">
+            <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed text-center md:text-left animate-fade-in">
+              I’m Roba Chimdesa, a 4th-year Computer Science and Engineering student at Adama Science and Technology University. I’m passionate about <span className="text-blue-600 dark:text-blue-400 font-semibold">web development</span> and <span className="text-blue-600 dark:text-blue-400 font-semibold">competitive programming</span>, constantly honing my skills to build innovative solutions.
+            </p>
+            {showMore && (
+              <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed text-center md:text-left animate-fade-in-up">
+                As a self-motivated learner, I thrive on exploring new technologies and tackling complex challenges. My drive to succeed fuels my enthusiasm for coding, problem-solving, and pushing the boundaries of what’s possible in tech.
+              </p>
+            )}
+            <button
+              onClick={handleShow}
+              className="block mx-auto md:mx-0 py-3 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg glow-button text-sm sm:text-base font-semibold"
+            >
+              {showMore ? "Hide Details" : "Show More"}
+            </button>
+          </div>
 
+          {/* Image */}
+          <div className="w-full md:w-1/2 mt-8 md:mt-0">
+            <img
+              src={about}
+              alt="Roba Chimdesa"
+              className="w-full h-64 sm:h-72 md:h-96 object-cover rounded-2xl shadow-xl transition-all duration-500 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-2xl"
+            />
+          </div>
+        </div>
 
+        {/* Typewriter */}
+        <div className="w-full mt-12 text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200">
+            <Typewriter
+              words={["Always Learning", "Always Improving"]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </h2>
+        </div>
+      </div>
 
-import { useState } from 'react';  
-import { Typewriter } from 'react-simple-typewriter';  
-import { about } from '../../assets';  
-
-const About = () => {  
-  const [showMore, setShowMore] = useState(false);  
-
-  const description = (  
-    <p className='mt-4'>  
-      My passion for learning and my drive to succeed make me a dedicated and  
-      motivated computer science and engineering student. With a strong  
-      foundation in web development and competitive programming, I’m  
-      well-positioned to excel in my future career in computer science.  
-    </p>  
-  );  
-
-  const handleShow = () => {  
-    setShowMore(!showMore);  
-  };  
-
-  return (  
-    <section id='about' className='w-full py-16 px-4 md:px-20'>  
-      <div className='flex flex-col md:flex-row md:gap-10 items-center'>  
-        <div className="w-full md:w-1/2">  
-          <h1 className="text-xl md:text-2xl font-bold mb-6 text-center md:text-left">  
-            About Me  
-          </h1>  
-          <p className="text-left mb-4">  
-            My name is Roba Chimdesa. I'm a 4th-year computer science and  
-            engineering student at Adama Science and Technology University. I  
-            have a strong interest in web development and competitive  
-            programming, and am constantly seeking to improve my skills in  
-            these areas.  
-          </p>  
-          {showMore && (  
-            <p className="flex-grow text-left mb-4">  
-              I'm a self-motivated learner who is eager to explore new  
-              technologies and programming languages. I enjoy taking on new  
-              challenges and solving complex problems, which has led me to  
-              develop a keen interest in competitive programming.  
-            </p>  
-          )}  
-          <button  
-            onClick={handleShow}  
-            className="bg-sky-700 hover:bg-sky-500 transition px-6 py-2 rounded-full mx-auto md:mx-0"  
-          >  
-            {showMore ? "Hide" : "Show"} Details  
-          </button>  
-        </div>  
-        <div className="mt-10 md:mt-0 md:w-1/2">  
-          <img  
-            src={about}  
-            alt="About Me"  
-            className="h-64 w-full object-cover rounded-2xl   
-                       transition ease-in-out delay-150 hover:-translate-x-1   
-                       hover:scale-y-110 duration-500"  
-          />  
-        </div>  
-      </div>  
-      <div className="w-full mt-8 text-center">  
-        <Typewriter  
-          words={['Always Learning', 'Always Improving']}  
-          loop={Infinity}  
-          cursor  
-          cursorStyle='|'  
-          typeSpeed={70}  
-          deleteSpeed={50}  
-          delaySpeed={1000}  
-        />  
-      </div>  
-    </section>  
-  );  
-};  
+      {/* Custom CSS for Glow Effect */}
+      <style jsx>{`
+        .glow-button {
+          box-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 25px rgba(99, 102, 241, 0.5);
+        }
+      `}</style>
+    </section>
+  );
+};
 
 export default About;
-
