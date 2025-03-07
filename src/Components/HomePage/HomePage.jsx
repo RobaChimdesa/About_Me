@@ -39,7 +39,7 @@ const Home = () => {
             />
           </h2>
           <p className="text-gray-200 text-base sm:text-lg md:text-xl max-w-md mx-auto md:mx-0">
-            A passionate 4th-year student at Adama Science and Technology University, dedicated to crafting innovative digital solutions.
+            A passionate 5th-year student at Adama Science and Technology University, dedicated to crafting innovative digital solutions.
           </p>
           <div className="flex justify-center md:justify-start gap-4 mt-4">
             <a
