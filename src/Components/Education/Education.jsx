@@ -1,8 +1,7 @@
-import React,{ useRef,useEffect,useState } from 'react'
-import { Certificates } from '../../constants/certificate'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-
+import React, { useRef, useEffect, useState } from "react";
+import { Certificates } from "../../constants/certificate";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 const Education = () => {
   const scrollContainerRef = useRef(null);
@@ -13,98 +12,121 @@ const Education = () => {
     const handleScroll = () => {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
       setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1); // Small buffer
     };
 
     const container = scrollContainerRef.current;
-    container.addEventListener('scroll', handleScroll);
+    container.addEventListener("scroll", handleScroll);
     handleScroll(); // Initial check
-    return () => container.removeEventListener('scroll', handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scroll = (direction) => {
-    if (direction === 'left') {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    const scrollAmount = window.innerWidth < 640 ? 200 : window.innerWidth < 768 ? 250 : 300; // Adjusted for mobile
+    if (direction === "left") {
+      scrollContainerRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     } else {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
-  
-  
 
   return (
-    <section id='education' className='gap-10 w-full h-[800px] items-center px-20 pt-10 '>
-       <h1 className="text-white text-2xl md:mx-56 md:mt-16 mb-7 font-bold ">
+    <section
+      id="education"
+      className="w-full py-6 sm:py-8 md:py-12 px-2 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800"
+    >
+      <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
+        {/* Education Heading */}
+        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-800 mb-4 sm:mb-6 animate-fade-in-down">
           Education
         </h1>
-      <div className=' md:ml-52 gap-12 md:flex md:mb-10'>
-      <div className="border-l-2 border-sky-500 border-solid  hover:border-yellow-500  p-4 mb-3  md:w-2/5 w-2/2  rounded-xl  bg-zinc-900 transition ease-in-out delay-150 hover:bg-black hover:-translate-y-1 hover:scale-105  duration-300 ...">
-            <p className="text-xl md:text-2xl text-red-500">2016-2020</p>
-            <h1 className="text-white text-xl md:text-2xl">High School Diploma</h1>
-            <p className="">
-              I attended at Bako Secondary School and obtained my high school
-              diploma. I have since pursued higher education by earning a pass
-              mark and joining a university and eager to expand my knowledge and
-              skills.
+
+        {/* Education Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
+          <div className=" bg-white dark:bg-gray-800 rounded-lg md:p-3 shadow-md border-l-4 border-blue-500 dark:border-blue-400 hover:border-yellow-500 dark:hover:border-yellow-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+            <p className="text-sm sm:text-base md:text-lg font-semibold text-red-500 dark:text-red-400">
+              2016 - 2020
+            </p>
+            <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-800 dark:text-gray-200 mt-1 sm:mt-2">
+              High School Diploma
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base line-clamp-3">
+              Attended Bako Secondary School, earning my high school diploma and setting the foundation for my university journey.
             </p>
           </div>
-          <div className="border-l-2 border-sky-500 border-solid  hover:border-yellow-500 p-4  md:w-2/5  rounded-xl bg-zinc-900 hover:bg-black transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105  duration-300 ...">
-            <p className="text-xl md:text-2xl text-red-500">2020-present</p>
-            <h1 className="text-white text-xl md:text-2xl">Bachelor's Degree</h1>
-            <p className="">
-            I am currently attending a five-year computer science and
-              engineering course at Adama Science and Technology University. As
-              a 4'th-year student, I have already completed a significant
-              portion of the program.
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 sm:p-4 shadow-md border-l-4 border-blue-500 dark:border-blue-400 hover:border-yellow-500 dark:hover:border-yellow-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+            <p className="text-sm sm:text-base md:text-lg font-semibold text-red-500 dark:text-red-400">
+              2020 - Present
+            </p>
+            <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-800 dark:text-gray-200 mt-1 sm:mt-2">
+              Bachelor's Degree
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base line-clamp-3">
+              Currently a 4th-year Computer Science and Engineering student at Adama Science and Technology University.
             </p>
           </div>
-          
-       </div>  
-       {" "}
-            <h1 className=" md:mx-56 mt-2 md:mb-3 font-bold text-2xl">
-              Certificates
-            </h1>  
-      <div className='relative w-full max-w-screen-lg mx-auto flex items-center'>
-        {/* <KeyboardDoubleArrowLeftIcon onClick={() => scroll('left')}/> */}
-        <button onClick={() => scroll('left')}
-         className={` p-1 rounded-full z-10 ${canScrollLeft ? 'text-green-500' : 'text-red-500'}`}
-       
-         disabled={!canScrollLeft}
-        
-        ><ArrowBackIosNewIcon/></button>
-        <div  className=' flex overflow-x-scroll space-x-4 p-4 scrollbar-hide' 
-        ref={scrollContainerRef} >
-        
-        {Certificates.map((item )=>(
-          <div key={item.id} className="border-l-2 border-sky-500 border-solid  hover:border-yellow-500 rounded-xl min-w-[300px] md:min-w-[450px] md:h-[220px] h-[120px] bg-zinc-900  hover:bg-black items-center  hover:scale-105 ease-in-out duration-500">
-            <p className='pl-6'>{item.name}</p>
-             <a href={item.img} target='_blank'>
-             <img
-           src={item.img} alt='hello'
-
-           className=' w-[445px] h-[100px] md:h-[200px] p-2 cursor-pointer ml-1'
-
-          />
-             </a>
-          
-          </div>
-          
-         
-       ))}
         </div>
-        <button onClick={() => scroll('right')} 
-         className={`rounded-full p-1 ${canScrollRight ? 'text-green-500' : 'text-red-500'}`}
-         
-         disabled={!canScrollRight}
-        
-        
-        ><ArrowForwardIosIcon /></button>
-        
-          {/* <KeyboardDoubleArrowRightIcon onClick={() => scroll('right')}/> */}
-     
-      </div>
-    </section>
-  )
-}
 
-export default Education
+        {/* Certificates Heading */}
+        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-800 mt-6 sm:mt-8 mb-4 sm:mb-6 animate-fade-in-down">
+          Certificates
+        </h1>
+
+        {/* Certificates Carousel */}
+        <div className="relative w-full mx-auto flex items-center px-0 sm:px-2">
+          <button
+            onClick={() => scroll("left")}
+            disabled={!canScrollLeft}
+            className={`absolute left-0 sm:-left-2 md:-left-4 z-10 p-1 sm:p-2 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-gray-700 dark:to-gray-600 text-white rounded-full shadow-md transition-all duration-300 transform hover:scale-105 ${!canScrollLeft ? "opacity-50 cursor-not-allowed" : "hover:from-blue-700 hover:to-indigo-700"
+              }`}
+          >
+            <ArrowBackIosNewIcon fontSize="small" className="w-3 h-3 sm:w-4 sm:h-4" />
+          </button>
+          <div
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto space-x-3 sm:space-x-4 p-2 sm:p-3 scrollbar-hide snap-x snap-mandatory w-full"
+          >
+            {Certificates.map((item) => (
+              <div
+                key={item.id}
+                className="min-w-[160px] sm:min-w-[200px] md:min-w-[250px] lg:min-w-[300px] bg-white dark:bg-gray-800 rounded-lg shadow-md border-l-4 border-blue-500 dark:border-blue-400 hover:border-yellow-500 dark:hover:border-yellow-400 transition-all duration-300 transform hover:scale-102 hover:shadow-lg snap-center flex-shrink-0 flex flex-col"
+              >
+                <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-800 dark:text-gray-200 p-2 sm:p-3 line-clamp-2">
+                  {item.name}
+                </p>
+                <a href={item.img} target="_blank" rel="noopener noreferrer" className="flex-grow">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-20 sm:h-24 md:h-28 lg:h-32 object-cover rounded-b-lg cursor-pointer transition-all duration-300 hover:brightness-110"
+                  />
+                </a>
+              </div>
+            ))}
+          </div>
+          <button
+            onClick={() => scroll("right")}
+            disabled={!canScrollRight}
+            className={`absolute right-0 sm:-right-2 md:-right-4 z-10 p-1 sm:p-2 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-gray-700 dark:to-gray-600 text-white rounded-full shadow-md transition-all duration-300 transform hover:scale-105 ${!canScrollRight ? "opacity-50 cursor-not-allowed" : "hover:from-blue-700 hover:to-indigo-700"
+              }`}
+          >
+            <ArrowForwardIosIcon fontSize="small" className="w-3 h-3 sm:w-4 sm:h-4" />
+          </button>
+        </div>
+      </div>
+
+      {/* Custom CSS for Scrollbar Hiding */}
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default Education;
