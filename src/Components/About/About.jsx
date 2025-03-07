@@ -24,7 +24,7 @@ const About = () => {
           {/* Text Content */}
           <div className="w-full md:w-1/2 space-y-6">
             <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed text-center md:text-left animate-fade-in">
-              I’m Roba Chimdesa, a 4th-year Computer Science and Engineering student at Adama Science and Technology University. I’m passionate about <span className="text-blue-600 dark:text-blue-400 font-semibold">web development</span> and <span className="text-blue-600 dark:text-blue-400 font-semibold">competitive programming</span>, constantly honing my skills to build innovative solutions.
+              I’m Roba Chimdesa, a 5th-year Computer Science and Engineering student at Adama Science and Technology University. I’m passionate about <span className="text-blue-600 dark:text-blue-400 font-semibold">web development</span> and <span className="text-blue-600 dark:text-blue-400 font-semibold">competitive programming</span>, constantly honing my skills to build innovative solutions.
             </p>
             {showMore && (
               <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed text-center md:text-left animate-fade-in-up">
