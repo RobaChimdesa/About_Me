@@ -70,7 +70,7 @@ export const Certificates = [
         id:'100',
         img:unsupervised,
         name:"Unsupervised Learning, Recommenders,Reinforcement Learning"
-    },
+    }
     
     // { id:'101',
     //  img:Huawei,
