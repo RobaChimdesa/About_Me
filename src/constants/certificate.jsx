@@ -11,7 +11,7 @@ import { linux } from "../assets"
 import { ORM } from "../assets"
 import { e_SHE } from "../assets"
 import { unsupervised } from "../assets"
-// import { Huawei } from "../assets"
+import { Huawei }  from "../assets"
 
 
 
@@ -70,12 +70,12 @@ export const Certificates = [
         id:'100',
         img:unsupervised,
         name:"Unsupervised Learning, Recommenders,Reinforcement Learning"
-    }
+    },
     
-    // { id:'101',
-    //  img:Huawei,
-    //  name:"HCIA-Datacom V1.0 Course"
-    // }     
+    { id:'101',
+     img:Huawei,
+     name:"HCIA-Datacom V1.0 Course"
+    }     
      
 ]
  
