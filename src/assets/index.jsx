@@ -58,6 +58,7 @@ export {
     linux,
     ORM,
     e_SHE,
-    unsupervised
+    unsupervised,
+    Huawei
        
 }
