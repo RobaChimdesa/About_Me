@@ -70,6 +70,7 @@ export const Certificates = [
         img:unsupervised,
         name:"Unsupervised Learning, Recommenders,Reinforcement Learning"
     },
+    
     { id:'101',
      img:Huawei,
      name:"HCIA-Datacom V1.0 Course"
