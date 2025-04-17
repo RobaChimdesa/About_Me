@@ -26,6 +26,7 @@ import home from './images/house.jpeg'
 import autho from './images/authontication.png'
 import e_SHE from './images/e-SHE.jpg'
 import unsupervised from './images/unsupervised.jpg'
+import Huawei from './images/huawei.png'
 
 export {
     roba,
@@ -58,5 +59,6 @@ export {
     ORM,
     e_SHE,
     unsupervised 
+    Huawei
    
 }
