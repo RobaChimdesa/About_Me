@@ -34,9 +34,18 @@ const Navbar = () => {
         className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-gray-800 dark:to-gray-700 rounded-full shadow-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 flex items-center justify-between max-w-5xl mx-auto transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
       >
         {/* Logo or Brand */}
-        <div className="text-white text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
+        {/* <div className="text-white text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
           <Link to="home" smooth={true} duration={500} offset={-70}>
             Portfolio
+          </Link>
+        </div> */}
+        <div className="flex items-center">
+          <Link to="home" smooth={true} duration={500} offset={-70}>
+            <span
+              className="text-2xl sm:text-3xl md:text-4xl font-[Pacifico] text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-500 dark:from-yellow-200 dark:to-pink-400 neon-sign hover:scale-105 hover:text-shadow-lg transition-all duration-300 animate-neon-pulse"
+            >
+              RC
+            </span>
           </Link>
         </div>
 
