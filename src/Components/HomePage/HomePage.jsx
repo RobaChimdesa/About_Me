@@ -124,7 +124,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import DownloadIcon from "@mui/icons-material/Download";
-import { nav1, roba } from "../../assets";
+import { roba } from "../../assets";
 
 
 const Home = () => {
